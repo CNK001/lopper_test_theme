@@ -1,0 +1,49 @@
+/**
+ * Pure CSS Floating labels like MD to BS4 based on 'placeholder-shown'
+ */
+
+.form-group {
+  display: flex;
+  flex-flow: column-reverse;
+  position: relative;
+
+  label,
+  .form-control {
+    touch-action: manipulation;
+    transition: transform .15s ease, width;
+  }
+
+  .form-control {
+    transform-origin: left top;
+
+    &::-webkit-input-placeholder {
+      opacity: 0;
+    }
+
+    &:placeholder-shown+label {
+      cursor: text;
+      transform: translate(0, .5rem) scale(1);
+    }
+
+    &:not(:placeholder-shown)+label,
+    &:focus+label {
+      cursor: pointer;
+      transform: translate(0, -.55rem) scale(.8571428);
+      width: fit-content;
+    }
+  }
+
+  label {
+    background: #fff;
+    color: $text-grey;
+    left: -2px;
+    line-height: 1.2;
+    margin: 0 .5rem;
+    padding: 0 3px;
+    position: absolute;
+    text-transform: uppercase;;
+    top: 1px;
+    transform-origin: left top;
+    transform: translate(0, 2rem) scale(1);
+  }
+}

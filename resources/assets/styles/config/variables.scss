@@ -1,0 +1,138 @@
+/**
+ * Variables
+ */
+
+ $html-font-size: 18px;
+
+// Color system
+
+// scss-docs-start gray-color-variables
+$white: #FCFCFC;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #c4c4c4;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black:    #000 !default;
+// scss-docs-end gray-color-variables
+
+// fusv-disable
+// scss-docs-start gray-colors-map
+$grays: (
+  "100": $gray-100,
+  "200": $gray-200,
+  "300": $gray-300,
+  "400": $gray-400,
+  "500": $gray-500,
+  "600": $gray-600,
+  "700": $gray-700,
+  "800": $gray-800,
+  "900": $gray-900
+) !default;
+// scss-docs-end gray-colors-map
+// fusv-enable
+
+// scss-docs-start color-variables
+$blue:    #0d6efd !default; 
+$indigo:  #6610f2 !default;
+$purple:  #6f42c1 !default;
+$pink:    #d63384 !default;
+$red:     #dc3545 !default;
+$orange:  #F67110;
+$yellow:  #ffc107 !default;
+$green:   #10F65E;
+$teal:    #20c997 !default;
+$cyan:    #0dcaf0 !default;
+$light-blue: #00a8f0;
+$error: #F0002B;
+$text-grey: #9B94A3;
+$text-main: #776C82;
+$text-header: #30233D;
+$light-grey: #F4F4ED;
+$tetriary: #00F0B5;
+$tetriary-light: #6DECAF;
+$primary: #F61067;
+$secondary-100: #5E239D;
+$secondary-200: #3A0475;
+$secondary-300: #30124E;
+$secondary-400: #150433;
+$btn-light: #f2f2f2;
+$rustic-red: #310214;
+// scss-docs-end color-variables
+
+// scss-docs-start colors-map
+$colors: (
+  "blue":       $blue,
+  "indigo":     $indigo,
+  "purple":     $purple,
+  "pink":       $pink,
+  "red":        $red,
+  "orange":     $orange,
+  "yellow":     $yellow,
+  "green":      $green,
+  "teal":       $teal,
+  "cyan":       $cyan,
+  "white":      $white,
+  "gray":       $gray-600,
+  "gray-dark":  $gray-800
+) !default;
+// scss-docs-end colors-map
+
+// scss-docs-start theme-color-variables
+$primary:       $blue !default;
+$secondary:     $gray-600 !default;
+$success:       $green !default;
+$info:          $light-blue;
+$warning:       $orange !default;
+$danger:        $red !default;
+$light:         $gray-100 !default;
+$dark:          $gray-900 !default;
+// scss-docs-end theme-color-variables
+
+// scss-docs-start theme-colors-map
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark
+) !default;
+// scss-docs-end theme-colors-map
+
+
+// stylelint-disable value-keyword-case
+$font-family-sans-serif: 'M PLUS 1p', sans-serif;
+
+$navbar-toggler-focus-width: 0;
+$navbar-light-toggler-border-color: transparent;
+$navbar-dark-toggler-border-color: transparent;
+// Container padding
+$container-padding-x: 0.8rem;
+
+
+// scss-docs-start grid-breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+  xxxl: 1600px
+) !default;
+
+$container-max-widths: (
+  xl: 1140px,
+  xxl: 83.45833333333333vw
+);
+
+$btn-border-radius: rem(36px);
+$input-btn-padding-x: 2.5rem;
+$input-border-radius: 0;

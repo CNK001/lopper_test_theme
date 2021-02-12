@@ -1,0 +1,26 @@
+/* Text/Nav */
+%navItemStyle {
+  font-size: rem(14.4px);
+  line-height: rem(30px);
+  letter-spacing: rem(2px);
+  font-weight: 800;
+}
+
+/* Text/Regular */
+%text-regular {
+  font-style: normal;
+  font-weight: normal;
+  font-size: rem(18px);
+  line-height: rem(29px);
+}
+
+
+@include _assert-starts-at-zero($grid-breakpoints, "$grid-breakpoints");
+@include _assert-ascending($container-max-widths, "$container-max-widths");
+
+@each $breakpoint,
+$container-max-width in $container-max-widths {
+    @if ($breakpoint !='xl' and $breakpoint !='xxl') {
+        $container-max-widths: ($breakpoint: 100%);
+    }
+}

@@ -1,0 +1,25 @@
+@import 'helpers/functions';
+
+/** Config */
+@import 'config/variables';
+@import 'config/external';
+
+
+/** Helpers */
+@import 'helpers/global_styles';
+
+/** Common */
+@import 'common/global';
+
+/** Components */
+@import 'components';
+
+/** Partials */
+@import 'partials/header';
+
+/** Home */
+@import 'partials/sections/intro';
+@import 'partials/sections/benefits';
+@import 'partials/sections/services';
+@import 'partials/sections/testimonials';
+@import 'partials/sections/newsletter';

@@ -1,0 +1,54 @@
+/**
+ * Button
+ */
+
+.wp-block-button {
+  &__link {
+    font-size: $btn-font-size;
+    line-height: $btn-line-height;
+    padding-bottom: $btn-padding-y;
+    padding-left: $btn-padding-x;
+    padding-right: $btn-padding-x;
+    padding-top: $btn-padding-y;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &.is-style-outline {
+    .wp-block-button__link {
+      @include button-outline-variant(
+        map-get($theme-colors, 'primary'),
+        map-get($theme-colors, 'light')
+      );
+    }
+  }
+
+  &.is-style-solid {
+    .wp-block-button__link {
+      @include button-variant(
+        map-get($theme-colors, 'primary'),
+        map-get($theme-colors, 'light')
+      );
+    }
+  }
+}
+
+/**
+ * Bootstrap Button
+ */
+
+.btn {
+  @include media-breakpoint-up(lg) {
+    height: rem(45px);
+    font-weight: 500; 
+    text-transform: uppercase;
+    letter-spacing: rem(2px);
+    font-size: rem(13.5px);
+line-height: rem(20px);
+display: inline-flex;
+align-items: center;
+letter-spacing: rem(2px);
+  }
+}

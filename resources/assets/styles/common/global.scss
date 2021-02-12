@@ -1,0 +1,127 @@
+/**
+ * Global
+ */
+
+html {
+  font-size: $html-font-size;
+}
+
+a {
+  color: map-get($theme-colors, 'primary');
+}
+
+a,
+button,
+.btn {
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+.btn-primary {
+  border: 2px solid transparent;
+  &:hover {
+    background: linear-gradient(180deg, rgba($primary, 0) 0%, rgba($rustic-red, 0.25) 100%), $primary;
+    background-blend-mode: multiply, normal;
+    box-shadow: 0px rem(8px) rem(16px) rgba($primary, 0.25);
+  }
+
+  &:active,
+  &:focus {
+    border: 2px solid rgba($secondary-100, 0.5);
+  }
+}
+
+/**
+ * Block editor color palette utilities
+ * @see https://git.io/JeyD6
+ */
+
+@each $color-name,
+$color-value in $theme-colors {
+  .has-#{$color-name}-color {
+    color: $color-value;
+  }
+
+  .has-#{$color-name}-background-color {
+    background-color: $color-value;
+  }
+}
+
+.section {
+
+  h2 {
+    color: $primary;
+    font-size: rem(12.6px);
+    font-weight: 800;
+    letter-spacing: rem(6px);
+    line-height: rem(26.2px);
+    margin-bottom: rem(18px);
+
+    @include media-breakpoint-down(md) {
+      margin-top: rem(18px);
+    }
+
+    text-transform: uppercase;
+    ;
+  }
+
+  h3 {
+    color: $text-header;
+    font-size: rem(45px);
+    font-weight: 500;
+    line-height: rem(67px);
+    margin-bottom: rem(19px);
+  }
+
+  .lead {
+    font-size: rem(18px);
+    font-weight: 800;
+    line-height: rem(29px);
+  }
+
+  .btn {
+    margin: 2rem 0;
+  }
+
+  .col-left {
+    @include media-breakpoint-up(lg) {
+      padding-right: rem(113px);
+    }
+  }
+
+  figure {
+    position: relative;
+
+    img {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+
+      @include media-breakpoint-up(md) {
+        width: 31.944444444444443vw;
+      }
+    }
+
+    figcaption {
+      align-items: center;
+      background: $secondary-300;
+      color: $white;
+      display: flex;
+      font-family: 'Noticia Text', serif;
+      justify-content: center;
+
+      @include media-breakpoint-up(md) {
+        bottom: 16.25vw;
+        height: 35vw;
+        left: 22.77777777777778vw;
+        margin-left: rem(15px);
+        position: absolute;
+        top: rem(-1px);
+        width: 26.180555555555557vw;
+        z-index: 1;
+      }
+    }
+  }
+}
